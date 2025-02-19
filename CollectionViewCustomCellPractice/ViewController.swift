@@ -8,12 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let collectionView = CollectionView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        addChild(collectionView)
+        view.addSubview(collectionView.view)
+        collectionView.didMove(toParent: self)
     }
-
 
 }
 
+#Preview {
+    ViewController()
+}
